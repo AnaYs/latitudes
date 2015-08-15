@@ -32,6 +32,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#Front-end gems
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'simple_form'
+
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
