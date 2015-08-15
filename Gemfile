@@ -39,6 +39,10 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
+#Heroku setup
+gem 'rails_12factor', group: :production
+gem 'puma',           group: :production
+
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
