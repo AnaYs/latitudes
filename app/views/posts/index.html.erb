@@ -2,8 +2,11 @@
 <h1>Chasing Latitudes</h1>
 
 <% @posts.each do |post| %>
-  <h3><%= link_to post.title, post_path(post) %></h3>
-  <p><%= post.abstract %></p>
+  <div class="post-wrapper">
+    <h3><%= link_to post.title, post_path(post) %></h3>
+    <p><%= post.abstract %></p>
+    <p><%= post.created_at.strftime("%B %e, %Y") %></p>
+  </div>
 <% end %>
 
 <%= link_to 'new post', new_post_path %>
