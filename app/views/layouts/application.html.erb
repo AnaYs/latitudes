@@ -10,13 +10,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 <%= render 'shared/navbar' %>
 <%= render 'shared/notices' %>
 
-<%= yield %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
 
-<%= javascript_include_tag 'application' %>
-<%= yield(:after_js) %>
+        <%= yield %>
+
+      </div>
+    </div>
+  </div>
+
+  <%= javascript_include_tag 'application' %>
+  <%= yield(:after_js) %>
 
 </body>
 </html>
