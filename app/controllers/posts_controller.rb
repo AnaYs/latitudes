@@ -26,6 +26,25 @@ class PostsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      if @post.update(post_params)
+        format.html { redirect_to post_path @post, notice: 'Post was updated.'}
+      else
+        format.html { render :edit}
+      end
+    end
+  end
+
+  def destroy
+    @post.destroy
+
+    redirect_to posts_path
+  end
+
 private
 
   def set_post
