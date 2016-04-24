@@ -13,9 +13,13 @@
 
 <%= render @post.comments %>
 
-<br>
-<h4>Add a comment:</h4>
-<%= render 'comments/form', locals: { object: @post} %>
+  <br>
+  <h4>Add a comment:</h4>
+<% if current_user %>
+  <%= render 'comments/form', locals: { object: @post} %>
+<% else %>
+  <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+<% end %>
 
 <hr>
 <%= link_to 'all posts', posts_path %>
