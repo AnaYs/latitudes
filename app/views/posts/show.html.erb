@@ -17,6 +17,9 @@
 <h4>Add a comment:</h4>
 <%= render 'comments/form', locals: { object: @post} %>
 
-<%= link_to 'edit post', edit_post_path(@post) %> |
-<%= link_to 'delete post', @post, method: :delete, data: { confirm: 'Do you really want to delete this post?' } %> |
+<hr>
 <%= link_to 'all posts', posts_path %>
+<% if admin? %>
+  <%= link_to 'edit post', edit_post_path(@post) %> |
+  <%= link_to 'delete post', @post, method: :delete, data: { confirm: 'Do you really want to delete this post?' } %> |
+<% end %>
