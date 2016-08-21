@@ -1,6 +1,8 @@
 
 <h1>Chasing Latitudes</h1>
 
+<%= link_to 'new post', new_post_path if admin? %>
+
 <% @posts.each do |post| %>
   <div class="post-wrapper">
     <h3><%= link_to post.title, post_path(post) %></h3>
@@ -9,4 +11,3 @@
   </div>
 <% end %>
 
-<%= link_to 'new post', new_post_path %>
