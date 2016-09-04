@@ -5,7 +5,7 @@
 h1 {
   font-size: 5em;
   font-family: arial,helvetica;
-  color: #fff;
+  color: white;
   margin: 0;
   padding: 0;
 }
@@ -14,25 +14,35 @@ h1 {
   text-align:center;
 }
 
+#section0,
 #section1,
 #section2,
 #section3,
-#section4 {
+#section4,
+#section5 {
    background-size: cover;
 }
 
+#section0 {
+  background-image: image-url("bg4.jpg");
+}
+
 #section1 {
-  background-image: image-url("bg1.jpg");
+  background-image: image-url("bg4.jpg");
 }
 
 #section2 {
-  background-image: image-url("bg2.jpg");
+  background-image: image-url("bg1.jpg");
 }
 
 #section3 {
-  background-image: image-url("bg3.jpg");
+  background-image: image-url("bg2.jpg");
 }
 
 #section4 {
+  background-image: image-url("bg3.jpg");
+}
+
+#section5 {
   background-image: image-url("bg4.jpg");
 }
