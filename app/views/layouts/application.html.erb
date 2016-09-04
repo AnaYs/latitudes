@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="
+https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <title><%= yield(:title) || "Latitudes" %></title>
   <meta name="description" content="<%= (yield(:description) || "").squish %>">
   <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -11,18 +14,10 @@
 </head>
 <body>
 
-<%= render 'shared/navbar' %>
-<%= render 'shared/notices' %>
+  <%= render 'shared/navbar' %>
+  <%= render 'shared/notices' %>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-
-        <%= yield %>
-
-      </div>
-    </div>
-  </div>
+  <%= yield %>
 
   <%= javascript_include_tag 'application' %>
   <%= yield(:after_js) %>

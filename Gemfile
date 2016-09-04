@@ -11,6 +11,7 @@ gem 'figaro'
 gem 'devise'
 gem 'jquery-ui-rails'
 gem 'jquery-rails'
+gem 'fullpage-rails'
 
 #Front-end gems
 gem 'bootstrap-sass'

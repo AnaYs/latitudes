@@ -1,11 +1,10 @@
-
-<h1>Chasing Latitudes</h1>
-
-<% @posts.each do |post| %>
-  <div class="post-wrapper">
-    <h3><%= link_to post.title, post_path(post) %></h3>
-    <p><%= post.abstract %></p>
-    <p><%= post.created_at.strftime("%B %e, %Y") %></p>
-  </div>
-<% end %>
-
+<%= render 'fullpage_script' %>
+<div id="fullpage">
+  <% @posts.each do |post| %>
+    <div class="section" id="section1">
+      <h3><%= link_to post.title, post_path(post) %></h3>
+      <p><%= post.abstract %></p>
+      <p><%= post.created_at.strftime("%B %e, %Y") %></p>
+    </div>
+  <% end %>
+</div>
