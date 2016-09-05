@@ -10,14 +10,14 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
 gem 'devise'
-gem 'jquery-ui-rails'
-gem 'jquery-rails'
-gem 'fullpage-rails'
 
 #Front-end gems
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'jquery-ui-rails'
+gem 'jquery-rails'
+gem 'fullpage-rails'
 
 #Heroku setup
 gem 'rails_12factor', group: :production

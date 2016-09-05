@@ -1,29 +1,61 @@
+<script type="text/javascript">
+  $(document).ready(function() {
 
-<h1> <%= @post.title %> </h1>
+    $("#owl-carousel").owlCarousel({
 
-<p> <%= @post.abstract %></p>
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
 
-<p> <%= @post.content %></p>
+        items : 4,
+        itemsDesktop : [1199,3],
+        itemsDesktopSmall : [979,3]
 
-<p> posted <%= time_ago_in_words(@post.created_at)%> ago</p>
+    });
 
-<hr>
+  });
+</script>
 
-<h3> <%= @post.comments.count %> comments</h3>
+<div class="container">
+  <h1> <%= @post.title %> </h1>
 
-<%= render @post.comments %>
+  <p> <%= @post.abstract %></p>
 
-  <br>
-  <h4>Add a comment:</h4>
-<% if current_user %>
-  <%= render 'comments/form', locals: { object: @post} %>
-<% else %>
-  <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-<% end %>
+  <p> <%= @post.content %></p>
 
-<hr>
-<%= link_to 'all posts', posts_path %>
-<% if admin? %>
-  <%= link_to 'edit post', edit_post_path(@post) %> |
-  <%= link_to 'delete post', @post, method: :delete, data: { confirm: 'Do you really want to delete this post?' } %> |
-<% end %>
+  <p> posted <%= time_ago_in_words(@post.created_at)%> ago</p>
+
+  <hr>
+
+<div id="owl-carousel">
+
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+
+</div>
+
+  <hr>
+
+  <h3> <%= @post.comments.count %> comments</h3>
+
+  <%= render @post.comments %>
+
+    <br>
+    <h4>Add a comment:</h4>
+  <% if current_user %>
+    <%= render 'comments/form', locals: { object: @post} %>
+  <% else %>
+    <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+  <% end %>
+
+  <hr>
+  <%= link_to 'all posts', posts_path %>
+  <% if admin? %>
+    <%= link_to 'edit post', edit_post_path(@post) %> |
+    <%= link_to 'delete post', @post, method: :delete, data: { confirm: 'Do you really want to delete this post?' } %> |
+  <% end %>
+</div>

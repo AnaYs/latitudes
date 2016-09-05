@@ -7,11 +7,15 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+//*= require owl.carousel
+//*= require owl.theme
 
 // Your CSS
 @import "layout/index";
 @import "components/index";
 @import "pages/index";
+@import "owl.carousel";
+@import "owl.theme";
 // @import "vendor/index";
 
 @import "bootstrap-sprockets";
@@ -24,6 +28,7 @@
 body {
   padding-top: 60px;
   font-family: 'Raleway', sans-serif;
+  background-color: #B47E2A;
 }
 
 section {
@@ -88,6 +93,7 @@ p {
 small > p {
   color: white
 }
+
 
 
 
