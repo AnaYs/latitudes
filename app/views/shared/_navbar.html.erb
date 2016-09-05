@@ -1,4 +1,4 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-inverse transparent">
   <div class="container">
     <%= link_to "Latitudes", root_path, id: "logo" %>
     <nav>
@@ -30,8 +30,6 @@
             </li>
           <% end %>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete unless admin? %></li>
-        <% else %>
-        <li><%= link_to "Log in", new_user_session_path %></li>
         <% end %>
       </ul>
     </nav>
