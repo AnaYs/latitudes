@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require fullpage
+//= require owl.carousel
 //= require bootstrap-sprockets
 //= require jquery-fileupload/basic
 //= require cloudinary/jquery.cloudinary
