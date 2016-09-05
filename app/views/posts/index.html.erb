@@ -1,5 +1,6 @@
 <%= render 'fullpage_script' %>
 <div id="fullpage">
+  <div class="section" id="section1337">
   <% @posts.each do |post| %>
     <div class="section" id="section<%= post.id %>">
       <h3><%= link_to post.title, post_path(post) %></h3>

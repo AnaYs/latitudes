@@ -19,7 +19,8 @@ h1 {
 #section2,
 #section3,
 #section4,
-#section5 {
+#section5,
+#section1337 {
    background-size: cover;
 }
 
@@ -45,4 +46,8 @@ h1 {
 
 #section5 {
   background-image: image-url("bg4.jpg");
+}
+
+#section1337 {
+  background-image: image-url("home.jpg");
 }
