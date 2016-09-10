@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  mount Attachinary::Engine => "/attachinary"
+
   get '/about', to: 'pages#about'
 
   devise_for :users
