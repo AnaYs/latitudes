@@ -1,16 +1,43 @@
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Header</h4>
-      </div>
-      <div class="modal-body">
-        <p>Body</p>
-      </div>
+
+        <div class="modal-body">
+          <div class="row">
+            <div class="about-intro col-md-6">
+              <p>
+                "As a bi-national, multi-lingual, pluri-professional citizen of the world, I have learned to appreciate that every place, society, country and community has their ups and downs, their pro and cons. Being a searching soul, I share my observations from the places I have lived in and am happy to connect, share and learn!"
+              </p>
+              <hr>
+              <div class="row">
+                <div class="col-md-6">
+                  <%= image_tag("crimpr_logo.png", height: "100", width: "170", alt: "https://crimpr.herokuapp.com") %>
+                </div>
+                <div class="col-md-6">
+                  <p>
+                    Crimpr is a crowdsource-based web application to find the nearest climbing spots around you.
+                  </p>
+                  <a href="https://crimpr.herokuapp.com">
+                    <p>
+                      https://crimpr.herokuapp.com
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <br>
+            </div>
+            <div class="about-image col-md-6">
+              <%= image_tag('profile_pic.jpg', height: "370", width: "370") %>
+            </div>
+          </div>
+        </div>
       <div class="modal-footer">
-      <p>Footer</p>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div class="text-center">
+          <a onclick="" class="btn btn-social-icon btn-lg btn-facebook"><i class="fa fa-facebook"></i></a>
+          <a onclick="" class="btn btn-social-icon btn-lg btn-linkedin"><i class="fa fa-linkedin"></i></a>
+          <a onclick="" class="btn btn-social-icon btn-lg btn-twitter"><i class="fa fa-twitter"></i></a>
+          <a onclick="" class="btn btn-social-icon btn-lg btn-instagram"><i class="fa fa-instagram"></i></a>
+        </div>
       </div>
     </div>
   </div>
