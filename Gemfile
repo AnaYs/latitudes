@@ -14,6 +14,9 @@ gem 'jquery-ui-rails'
 gem 'jquery-rails'
 gem 'fullpage-rails'
 
+#Image Upload
+gem 'cloudinary', '1.1.0'
+
 #Front-end gems
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
