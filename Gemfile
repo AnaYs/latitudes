@@ -14,6 +14,11 @@ gem 'jquery-ui-rails'
 gem 'jquery-rails'
 gem 'fullpage-rails'
 
+#Image Upload
+gem 'cloudinary', '1.1.0'
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
+
 #Front-end gems
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'

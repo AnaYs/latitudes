@@ -7,6 +7,7 @@ https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.css" />
   <title><%= yield(:title) || "Latitudes" %></title>
   <meta name="description" content="<%= (yield(:description) || "").squish %>">
   <%= stylesheet_link_tag    'application', media: 'all' %>
+
   <!-- Add these line for detecting device width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -20,6 +21,7 @@ https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.css" />
   <%= yield %>
 
   <%= javascript_include_tag 'application' %>
+  <%= cloudinary_js_config %>
   <%= yield(:after_js) %>
 
 </body>

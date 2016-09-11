@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160424151959) do
+ActiveRecord::Schema.define(version: 20160910095629) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,22 @@ ActiveRecord::Schema.define(version: 20160424151959) do
 
   add_index "admins", ["user_id"], name: "index_admins_on_user_id", using: :btree
 
+  create_table "attachinary_files", force: :cascade do |t|
+    t.integer  "attachinariable_id"
+    t.string   "attachinariable_type"
+    t.string   "scope"
+    t.string   "public_id"
+    t.string   "version"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "format"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "attachinary_files", ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent", using: :btree
+
   create_table "comments", force: :cascade do |t|
     t.string   "name"
     t.text     "body"
@@ -33,6 +49,15 @@ ActiveRecord::Schema.define(version: 20160424151959) do
   end
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
+
+  create_table "images", force: :cascade do |t|
+    t.integer  "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "upload_id"
+  end
+
+  add_index "images", ["post_id"], name: "index_images_on_post_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -62,4 +87,5 @@ ActiveRecord::Schema.define(version: 20160424151959) do
 
   add_foreign_key "admins", "users"
   add_foreign_key "comments", "posts"
+  add_foreign_key "images", "posts"
 end
