@@ -25,92 +25,111 @@
 
 /* universal */
 
-body {
-  padding-top: 60px;
-  font-family: 'Raleway', sans-serif;
-  background-color: #B47E2A;
-}
-
-section {
+ul {
   overflow: auto;
 }
 
-textarea {
-  resize: vertical;
+ul li {
+  list-style-type: none;
+  float: left;
 }
 
-.center {
+ul li a i {
+  background: #205D7A;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 27px;
+  font-size: 25px;
   text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
+  margin-right: 10px;
+  padding-top: 15%;
 }
 
-/* typography */
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+.fa-facebook {
+  background:#3b5998
+}
+.fa-linkedin {
+  background:#007bb6
+}
+.fa-twitter {
+  background:#00aced
+}
+.fa-instagram {
+  background:#007bb6
+}
+.fa-github {
+  background:black
 }
 
-h1 {
-  font-size: 5em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
+ul li a i {
+  transition: all 0.2s ease-in-out;
+}
+ul li a i:hover {
+  opacity: .7;
 }
 
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
+
+
+
+
+
+
+
+// -----------------------------------
+
+p.italic {
+    font-style: italic;
+}
+
+p.normal {
   font-weight: normal;
-  color: $gray-light;
-  font-family: 'Raleway', sans-serif;
 }
 
-h3 {
-  font-size: 3.5em;
-  letter-spacing: -1px;
-  text-align: center;
-  font-weight: normal;
-  color: white;
-  font-family: 'Indie Flower', cursive;
+p.thin {
+  font-weight: 200;
 }
 
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-  font-family: 'Raleway', sans-serif;
+.about-image {
+  positioning: absolute;
 }
 
-//  .navbar.navbar-fixed-top.navbar-inverse.transparent {
-//     border-width: 0px;
-//     -webkit-box-shadow: 0px 0px;
-//     box-shadow: 0px 0px;
-//     background-color: rgba(0,0,0,0.0);
-//     background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
-//     background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
-//     background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
-// }
-
-// .navbar-inverse .navbar-nav > li > a {
-//     color: white;
-//     }
-
-small > p {
-  color: white
-}
-
-
-/* unvisited link */
 a:link {
     color: white;
 }
 
-/* selected link */
 a:active {
     color: grey;
 }
+
+a:visited {
+    color: white;
+}
+
+.modal-backdrop
+{
+    opacity:0.1 !important;
+}
+
+.modal-lg {
+  width: 80%;
+  opacity:0.9 !important;
+}
+
+.modal-dialog {
+  margin: 52px auto;
+}
+
+.modal-body {
+  background-color: #1F1F1F;
+}
+
+.modal-footer {
+  background-color: #1F1F1F;
+}
+
+.modal-body > p {
+  color: white;
+}
+
 

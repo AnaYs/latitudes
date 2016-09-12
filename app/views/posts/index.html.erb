@@ -3,9 +3,9 @@
   <%= render 'home_page' %>
   <% @posts.each do |post| %>
     <div class="section" id="section<%= post.id %>">
-      <h3><%= link_to post.title, post_path(post) %></h3>
-      <p><%= post.abstract %></p>
-      <p><%= post.created_at.strftime("%B %e, %Y") %></p>
+      <h3 class="post_title"><%= link_to post.title, post_path(post) %></h3>
+      <p class="post_abstract"><%= post.abstract %></p>
+      <p class="post_date"><%= post.created_at.strftime("%B %e, %Y") %></p>
     </div>
   <% end %>
 </div>
