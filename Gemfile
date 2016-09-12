@@ -14,15 +14,18 @@ gem 'jquery-ui-rails'
 gem 'jquery-rails'
 gem 'fullpage-rails'
 
-#Image Upload
+#Image upload
 gem 'cloudinary', '1.1.0'
 gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
 
-#Front-end gems
+#Front-end
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
+
+#Mailer
+gem 'mail_form'
 
 #Heroku setup
 gem 'rails_12factor', group: :production
