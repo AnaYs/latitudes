@@ -74,7 +74,7 @@ ul li a i:hover {
 
 .modal-fullscreen {
   background: transparent;
-  background: black;
+  background-color: #222222;
 }
 .modal-fullscreen .modal-content {
   background: transparent;
@@ -114,15 +114,6 @@ ul li a i:hover {
   }
 }
 
-
-
-
-
-
-
-
-// -----------------------------------
-
 p.italic {
     font-style: italic;
 }
@@ -150,31 +141,4 @@ a:active {
 a:visited {
     color: white;
 }
-
-// .modal-backdrop
-// {
-//     opacity:0.1 !important;
-// }
-
-// .modal-lg {
-//   width: 80%;
-//   opacity:0.9 !important;
-// }
-
-// .modal-dialog {
-//   margin: 52px auto;
-// }
-
-// .modal-body {
-//   background-color: #1F1F1F;
-// }
-
-// .modal-footer {
-//   background-color: #1F1F1F;
-// }
-
-// .modal-body > p {
-//   color: white;
-// }
-
 
