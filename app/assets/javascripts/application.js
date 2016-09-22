@@ -38,3 +38,5 @@ $(".modal-fullscreen").on('show.bs.modal', function () {
 $(".modal-fullscreen").on('hidden.bs.modal', function () {
   $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
 });
+
+$.fn.fullpage.setLockAnchors(false);
