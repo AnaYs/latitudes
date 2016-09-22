@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="row">
-      <%= link_to "Read latest article", post_path(Post.first), class: "btn btn-primary outline", id: "home_button" %>
+      <%= link_to "#{@sample_post.title}", post_path(Post.first), class: "btn btn-primary outline", id: "home_button" %>
     </div>
     <div class="row" id="home_arrow">
       <i class="fa fa-arrow-down fa-3x white" aria-hidden="true"></i>
