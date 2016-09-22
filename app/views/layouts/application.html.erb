@@ -15,17 +15,17 @@ https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.css" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <%= csrf_meta_tags %>
 </head>
-<body>
+  <body>
 
-  <%= render 'shared/navbar' %>
-  <%= render 'shared/notices' %>
-  <%= render 'shared/about_modal' %>
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/notices' %>
+    <%= render 'shared/about_modal' %>
 
-  <%= yield %>
+    <%= yield %>
 
-  <%= javascript_include_tag 'application' %>
-  <%= cloudinary_js_config %>
-  <%= yield(:after_js) %>
+    <%= javascript_include_tag 'application' %>
+    <%= cloudinary_js_config %>
+    <%= yield(:after_js) %>
 
 </body>
 </html>

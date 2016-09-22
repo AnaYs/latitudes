@@ -1,7 +1,9 @@
-<h4><%= comment.name %></h4>
+<p><b><%= comment.name %></b> said:</p>
 
-<p> <%= comment.body %></p>
+<p><%= comment.body %></p>
 
-<p> <%= time_ago_in_words(comment.created_at) %></p>
+<p><i><small><%= time_ago_in_words(comment.created_at)%> ago</small></i></p>
 
 <%= link_to 'delete', [comment.post, comment], method: :delete, class: 'btn btn-primary', data: { confirm: 'Are you sure?' } if admin? %>
+<br>
+<br>
