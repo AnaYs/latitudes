@@ -10,9 +10,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
 gem 'devise'
-gem 'jquery-ui-rails'
-gem 'jquery-rails'
-gem 'fullpage-rails'
 
 #Image upload
 gem 'cloudinary', '1.1.0'
@@ -23,6 +20,9 @@ gem 'jquery-fileupload-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'jquery-ui-rails'
+gem 'jquery-rails'
+gem 'fullpage-rails'
 
 #Mailer
 gem 'mail_form'

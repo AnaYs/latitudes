@@ -13,8 +13,28 @@
 //= require jquery
 //= require jquery_ujs
 //= require fullpage
+//= require owl.carousel
 //= require bootstrap-sprockets
 //= require jquery-fileupload/basic
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
 //= require_tree .
+
+
+$(".modal-transparent").on('show.bs.modal', function () {
+  setTimeout( function() {
+    $(".modal-backdrop").addClass("modal-backdrop-transparent");
+  }, 0);
+});
+$(".modal-transparent").on('hidden.bs.modal', function () {
+  $(".modal-backdrop").addClass("modal-backdrop-transparent");
+});
+
+$(".modal-fullscreen").on('show.bs.modal', function () {
+  setTimeout( function() {
+    $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+  }, 0);
+});
+$(".modal-fullscreen").on('hidden.bs.modal', function () {
+  $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+});

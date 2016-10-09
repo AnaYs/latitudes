@@ -1,0 +1,56 @@
+<div class="modal modal-fullscreen fade" id="myModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-body">
+          <div class="row">
+            <div class="about-intro col-md-4 col-md-offset-1">
+              <p class="white">
+              <br>
+              <br>
+                "As a bi-national, multi-lingual, pluri-professional citizen of the world, I have learned to appreciate that every place, society, country and community has their ups and downs, their pro and cons. Being a searching soul, I share my observations from the places I have lived in and am happy to connect, share and learn!"
+              </p>
+              <hr>
+              <div class="row">
+                <div class="col-md-6">
+                  <%= image_tag("crimpr_logo.png", height: "100", width: "170", alt: "https://crimpr.herokuapp.com") %>
+                </div>
+                <div class="col-md-6">
+                  <p class="white italic thin">
+                    Crimpr is a crowdsource-based web application to find the nearest climbing spots around you.
+                  </p>
+                  <a href="https://crimpr.herokuapp.com">
+                    <p>
+                      https://crimpr.herokuapp.com
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 col-md-offset-1 text-center">
+            <br>
+              <%= image_tag('profile_pic.jpg', height: "320", width: "426") %>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <%= render 'shared/instagram_widget' %>
+          </div>
+          </div>
+        </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <ul id="social-list">
+              <li class="social-item"><a href="http://facebook.com/"><i class="fa fa-facebook fa-2x"></i></a></li>
+              <li class="social-item"><a href="http://linkedin.com/"><i class="fa fa-linkedin fa-2x"></i></a></li>
+              <li class="social-item"><a href="http://twitter.com/"><i class="fa fa-twitter fa-2x"></i></a></li>
+              <li class="social-item"><a href="http://plus.google.com/"><i class="fa fa-instagram fa-2x"></i> </a></li>
+              <li class="social-item"><a href="http://plus.google.com/"><i class="fa fa-github fa-2x"></i> </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

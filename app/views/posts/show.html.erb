@@ -1,34 +1,49 @@
-  <%= link_to 'all posts', posts_path %> |
+<div class="container margin-top-60">
   <% if admin? %>
     <%= link_to 'edit post', edit_post_path(@post) %> |
-    <%= link_to 'delete post', @post, method: :delete, data: { confirm: 'Do you really want to delete this post?' } %> |
+    <%= link_to 'delete post', @post, method: :delete, data: { confirm: 'Do you really want to delete this post?' } %>
   <% end %>
-
-<hr>
-
-  <h1> <%= @post.title %> </h1>
-  <p> <%= @post.abstract %></p>
-  <p> <%= @post.content %></p>
-  <p> posted <%= time_ago_in_words(@post.created_at)%> ago</p>
-
-<hr>
-
-  <% @post.photos.each do |photo| %>
-    <%= cl_image_tag photo.path, :width=>200, :height=>300, :crop=>"scale" %>
-  <% end %>
-
-<hr>
-
-  <h3> <%= @post.comments.count %> comments</h3>
-  <%= render @post.comments %>
-
-<br>
-
-  <h4>Add a comment:</h4>
-  <% if current_user %>
-    <%= render 'comments/form', locals: { object: @post} %>
-  <% else %>
-    <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-  <% end %>
-
-
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class= "text-center"><%= @post.title %></h2>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p><%= @post.abstract %></p>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p><%= @post.content %></p>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      Photo gallery
+      <% @post.photos.each do |photo| %>
+        <%= cl_image_tag photo.path, :width=>200, :height=>300, :crop=>"scale" %>
+      <% end %>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-2">
+      <h4>comments (<%= @post.comments.count %>)</h4>
+      <%= render @post.comments %>
+      <hr>
+    </div>
+    <div class="col-md-4">
+      <% if current_user %>
+        <h4>Add a comment:</h4>
+        <%= render 'comments/form', locals: { object: @post} %>
+      <% else %>
+        <%= link_to t(".sign_in", default: "Login to comment"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <% end %>
+    </div>
+  </div>
+  <br>
+</div>
