@@ -1,13 +1,11 @@
 <%= render 'fullpage_script' %>
 <div id="fullpage">
   <%= render 'home_page' %>
-  <% if @posts.any? %>
-    <% @posts.each do |post| %>
-      <div class="section" id="section<%= post.id %>" style="background-image: url('http://res.cloudinary.com/anays/image/upload/c_fit/<%= post.photos.first.path %>')">
-        <h3 class="post_title"><%= link_to post.title, post_path(post) %></h3>
-        <p class="post_abstract"><%= post.abstract %></p>
-        <p class="post_date"><%= post.created_at.strftime("%B %e, %Y") %></p>
-      </div>
-    <% end %>
+  <% @posts.each do |post| %>
+      <div class="section" id="section<%= post.id %>" style="background-image: url(<%= background_photo_url(post) %>)">
+      <h3 class="post_title"><%= link_to post.title, post_path(post) %></h3>
+      <p class="post_abstract"><%= post.abstract %></p>
+      <p class="post_date"><%= post.created_at.strftime("%B %e, %Y") %></p>
+    </div>
   <% end %>
 </div>
