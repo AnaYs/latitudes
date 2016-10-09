@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order("created_at DESC")
-    @sample_post = Post.all.sample
+    # @sample_post = Post.all.sample
   end
 
   def new
