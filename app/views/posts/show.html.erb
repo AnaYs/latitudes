@@ -1,32 +1,43 @@
 <div class="container margin-top-60">
   <% if admin? %>
+    <%= link_to 'all posts', posts_path %> |
     <%= link_to 'edit post', edit_post_path(@post) %> |
     <%= link_to 'delete post', @post, method: :delete, data: { confirm: 'Do you really want to delete this post?' } %>
   <% end %>
+  <br>
+  <br>
+  <br>
+  <br>
   <div class="row">
-    <div class="col-md-12">
-      <h2 class= "text-center"><%= @post.title %></h2>
-      <hr>
+    <div class="col-md-6">
+      <h1 class= "text-center" id="post-title"><%= @post.title %></h1>
+      <p class="text-center"><small>written by Anna Isabel Lamers on <%= @post.created_at.strftime("%B %e, %Y") %></small></p>
+    </div>
+    <div class="col-md-6" id="post-abstract">
+      <p>"<%= @post.abstract %>"</p>
     </div>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
   <div class="row">
-    <div class="col-md-12">
-      <p><%= @post.abstract %></p>
-      <hr>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12" id="post-content">
       <p><%= @post.content %></p>
       <hr>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
-      Photo gallery
+      <div id="owl-demo">
       <% @post.photos.each do |photo| %>
-        <%= cl_image_tag photo.path, :width=>200, :height=>300, :crop=>"scale" %>
+        <div class="item"><%= cl_image_tag photo.path, crop: :fit %></div>
+        <div class="item"><%= cl_image_tag photo.path, crop: :fit %></div>
+        <div class="item"><%= cl_image_tag photo.path, crop: :fit %></div>
+        <div class="item"><%= cl_image_tag photo.path, crop: :fit %></div>
+        <div class="item"><%= cl_image_tag photo.path, crop: :fit %></div>
       <% end %>
+      </div>
       <hr>
     </div>
   </div>

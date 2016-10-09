@@ -20,15 +20,28 @@
 //= require attachinary
 //= require_tree .
 
+$(document).ready(function() {
 
-$(".modal-transparent").on('show.bs.modal', function () {
-  setTimeout( function() {
-    $(".modal-backdrop").addClass("modal-backdrop-transparent");
-  }, 0);
+  $("#owl-demo").owlCarousel({
+
+      autoPlay: 6000, //Set AutoPlay to 3 seconds
+
+      items : 3,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3]
+
+  });
+
 });
-$(".modal-transparent").on('hidden.bs.modal', function () {
-  $(".modal-backdrop").addClass("modal-backdrop-transparent");
-});
+
+// $(".modal-transparent").on('show.bs.modal', function () {
+//   setTimeout( function() {
+//     $(".modal-backdrop").addClass("modal-backdrop-transparent");
+//   }, 0);
+// });
+// $(".modal-transparent").on('hidden.bs.modal', function () {
+//   $(".modal-backdrop").addClass("modal-backdrop-transparent");
+// });
 
 $(".modal-fullscreen").on('show.bs.modal', function () {
   setTimeout( function() {
