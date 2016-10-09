@@ -1,10 +1,7 @@
 class ContactsController < ApplicationController
+  protect_from_forgery except: [:new, :create]
   def new
     @contact = Contact.new
-    respond_to do |format|
-      format.html { render :layout => false }
-      format.js { render :action => 'new' }
-    end
   end
 
   def create
@@ -12,16 +9,12 @@ class ContactsController < ApplicationController
     @contact.request = request
 
     respond_to do |format|
-    if @contact.save
-      @contact.deliver
-      format.html { redirect_to places_path, :notice => "Successfully created place" }
-      format.js
-    else
-      flash.message[:error] = "You're message could not be sent."
-      format.html { render :action => 'new' }
-      format.js { render :action => 'new' }
+      if @contact.deliver
+        format.html { redirect_to root_path, notice: "That better not be spam! No, seriously, I'm looking forward to read you." }
+      else
+        format.html { redirect_to root_path, warning: "Oops. Something went wrong. Just write me an email, 'kay? hello@anays.com" }
       end
     end
-
   end
 end
+
