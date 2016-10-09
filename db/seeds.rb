@@ -22,17 +22,17 @@ Admin.create(
   user: u
 )
 
-Post.create!(title:  "Finale",
-             abstract: "Italy",
-             content: "Lorem ipsum")
+# Post.create!(title:  "Finale",
+#              abstract: "Italy",
+#              content: "Lorem ipsum")
 
-4.times do |n|
-  title      = Faker::Address.city
-  abstract   = Faker::App.name
-  content    = Faker::Lorem.paragraph
-  created_at = Faker::Date.between(1.year.ago, Date.today)
-  Post.create!(title:    title,
-               abstract: abstract,
-               content:  content,
-               created_at: created_at)
-end
+# 4.times do |n|
+#   title      = Faker::Address.city
+#   abstract   = Faker::App.name
+#   content    = Faker::Lorem.paragraph
+#   created_at = Faker::Date.between(1.year.ago, Date.today)
+#   Post.create!(title:    title,
+#                abstract: abstract,
+#                content:  content,
+#                created_at: created_at)
+# end
