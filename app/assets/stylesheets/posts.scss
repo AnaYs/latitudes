@@ -2,6 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#owl-demo .item{
+  margin: 3px;
+}
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#post-abstract{
+  font-family: 'Cormorant Garamond', serif;
+  border-left: solid black;
+  font-size: x-large;
+}
+
+#post-content{
+  font-family: 'Raleway', sans-serif;
+  font-size: larger;
+}
+
+#post-title{
+  font-family: 'Raleway', sans-serif;
+}
+
 h3.post_title {
   font-size: 3.5em;
   letter-spacing: -1px;
