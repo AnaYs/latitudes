@@ -1,8 +1,8 @@
-<div class = "modal-dialog">
+<div class = "modal-dialog top-padding-1">
   <div class = "modal-content">
     <div class = "modal-header">
-      <button aria-hidden = "true", class = "true", data-dismiss = "modal", type="button">x</button>
-      <h1>Contact</h1>
+      <a href="/" class="btn btn-default centered" role="button">x</a>
+      <h2 class= "modal-title">Contact</h1>
       <div class = "modal-body">
         <%= simple_form_for @contact, html: {class: "form-horizontal"} do |f| %>
           <%= f.input :name, :required => true %>
@@ -20,3 +20,8 @@
     </div>
   </div>
 </div>
+
+
+<script>
+  document.body.style.backgroundColor = "rgba(34,34,34,0.7)";
+</script>
