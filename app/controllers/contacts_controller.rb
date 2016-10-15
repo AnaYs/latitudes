@@ -1,5 +1,8 @@
 class ContactsController < ApplicationController
   protect_from_forgery except: [:new, :create]
+
+  skip_before_action :authenticate_user!
+
   def new
     @contact = Contact.new
   end
