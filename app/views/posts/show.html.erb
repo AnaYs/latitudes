@@ -32,10 +32,6 @@
       <div id="owl-demo">
       <% @post.photos.each do |photo| %>
         <div class="item"><%= cl_image_tag photo.path, crop: :fit %></div>
-        <div class="item"><%= cl_image_tag photo.path, crop: :fit %></div>
-        <div class="item"><%= cl_image_tag photo.path, crop: :fit %></div>
-        <div class="item"><%= cl_image_tag photo.path, crop: :fit %></div>
-        <div class="item"><%= cl_image_tag photo.path, crop: :fit %></div>
       <% end %>
       </div>
       <hr>
