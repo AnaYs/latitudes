@@ -32,4 +32,21 @@ post1 = Post.create!( title:  "that special spark",
 post1.photo_urls = image_links1
 
 #Second post
+image_links2 = [
+  'http://res.cloudinary.com/anays/image/upload/v1476856856/Seed/4.jpg',
+  'http://res.cloudinary.com/anays/image/upload/v1476857030/Seed/5.jpg',
+  'http://res.cloudinary.com/anays/image/upload/v1476856855/Seed/6.jpg'
+]
+post2 = Post.create!( title:  "climbing nomads",
+                      abstract: "There is no better way to travel than immersing into a climbing community.",
+                      content: "Initially I set out to write this blog from the perspective of travelling climbers, or rather on nomad climbers that have lived in different places in the world and discovered, and re-discovered, rock climbing each time. This will be my first post related to this purpose.
 
+While I started rock climbing at the late age of 21 in southern France, the first “real” climbing community that I joined was in Amman, Jordan. Just as different cultures have different greetings, so do many climbing communities. In Jordan, it was interlocking your pinkie fingers. Another tradition here was that lead climbing was perceived as highly risky, which – considering the large amount of new routes and hence, falling rock – is comprehensible. The climbing community in Amman is manageably sized, but – what I found striking – not as accessible as one can imagine. Arab culture and the relative novelty of climbing as a sport, make it so that most local climbers are men. When I started in 2011/12, a new high-tech climbing gym, CLIMBAT, with powerful air-conditioning, massive glass façades and numerous routes ranging from grade 5a to 7c (French) had been recently opened. At the time, I would become one of the stronger female climbers in the group (as there were not many). There however was a dynamic of Arab male climbers dating Western rock climber girls and thereby, allowing them to join outdoor climbing trips – or not. While this created unpleasant situations at times, the main actors in the Jordanian climbing scene always tried to keep a window open for genuinely-interested rock climbers, no matter their (non-)affiliation or gender.
+
+Despite this slightly exclusivist experience in Jordanian rock climbing, I still believe that rock-climbing communities, especially emerging ones, are very welcoming and open to ‘foreigners’. In no time I was able to see all the climbing crags in Jordan and was even able to join on bolting trips (not actually bolt!). I even was given the honour to open a 6a; even though I had only been rock climbing for a year or so. For climbers used to outdoor climbing and curious enough to explore new rock, it is really an amazing way to travel and explore the culture by immersing in a climbing community, living their traditions and exploring their favourite crags or new bolting projects. Climbing communities exist almost anywhere nowadays and are always so welcoming to support from the outside, be it Panama, Jerusalem or the Philippines to name a few.
+
+Jordan’s climbs involve beautiful limestone in the North of the country and impressive sandstone or basalt formations in the South. Routes are usually easier graded compared to Europe due to the limited influence of Western climbers, but you will be able to find your challenge somehow, for example by bolting harder routes that locals were not able to set. The main head of the climbing community is “Mister bolting Jordan”, called Hakim Tamini, also founder of Tropical Desert, an adventure company that can take you on rock climbing, canyoning and other outdoor trips. The number of routes continues to grow with the community and climbing spots are popping up while local climbers collect money to keep bolting and invite their fellow countrymen and –women to get on the rock. If ever you have a chance to pass by, go and meet the amazing, pioneer climbers of Jordan.",
+                      created_at: DateTime.new(2016,10,19)
+)
+
+post2.photo_urls = image_links2
