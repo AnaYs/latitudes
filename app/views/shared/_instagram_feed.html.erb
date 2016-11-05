@@ -1,0 +1,9 @@
+<% @popular_images.each do |popular| %>
+  <div class="col-sm-12 col-md-4">
+    <div class="thumbnail" style="margin-top: 22px;">
+      <%= link_to "https://www.instagram.com/ana.yz/" do %>
+        <%= image_tag popular.images.thumbnail.url %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.order("created_at DESC")
     @sample_post = Post.all.sample if Post.any?
+    @popular_images = instagram_feed.sample(3)
   end
 
   def new
@@ -47,6 +48,10 @@ class PostsController < ApplicationController
   end
 
 private
+
+  def instagram_feed
+    instagram_feed ||= Instagram.user_recent_media
+  end
 
   def set_post
     @post = Post.find(params[:id])

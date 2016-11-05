@@ -13,7 +13,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <%= link_to "https://crimpr.herokuapp.com" do %>
-                    <%= image_tag("crimpr_logo.png", height: "100", width: "170", alt: "https://crimpr.herokuapp.com") %>
+                    <%= image_tag("Crimpr_LogoStudyTwo.png", height: "100", width: "170", alt: "https://crimpr.herokuapp.com") %>
                   <% end %>
                 </div>
                 <div class="col-md-6">
@@ -31,20 +31,14 @@
           <hr>
           <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <%= render 'shared/instagram_widget' %>
+            <%= render 'shared/instagram_feed', locals: {popular_images: @popular_images}%>
           </div>
           </div>
         </div>
       <div class="modal-footer">
         <div class="row">
           <div class="col-md-12 col-md-offset-4">
-            <ul id="social-list">
-              <li class="social-item"><a href="http://facebook.com/"><i class="fa fa-facebook fa-2x"></i></a></li>
-              <li class="social-item"><a href="http://linkedin.com/"><i class="fa fa-linkedin fa-2x"></i></a></li>
-              <li class="social-item"><a href="http://twitter.com/"><i class="fa fa-twitter fa-2x"></i></a></li>
-              <li class="social-item"><a href="http://plus.google.com/"><i class="fa fa-instagram fa-2x"></i> </a></li>
-              <li class="social-item"><a href="http://plus.google.com/"><i class="fa fa-github fa-2x"></i> </a></li>
-            </ul>
+            <%= render 'shared/social_media' %>
           </div>
         </div>
       </div>
