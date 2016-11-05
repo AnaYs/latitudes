@@ -29,6 +29,9 @@ gem 'fullpage-rails'
 #Mailer
 gem 'mail_form'
 
+#Instagram API
+gem 'instagram'
+
 #Heroku setup
 gem 'rails_12factor', group: :production
 gem 'puma',           group: :production
