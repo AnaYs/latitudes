@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
 
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :instagram_feed
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
@@ -49,10 +48,6 @@ class PostsController < ApplicationController
   end
 
 private
-
-  def instagram_feed
-    @popular_images ||= Instagram.user_recent_media.sample(3)
-  end
 
   def set_post
     @post = Post.find(params[:id])
